@@ -1,0 +1,53 @@
+# =============================================================================
+# OpenStack Credentials
+# =============================================================================
+
+openstack_auth_url    = "https://openstack.example.com:5000/v3"
+openstack_username    = "my-user"
+openstack_password    = "my-password"
+openstack_tenant_name = "my-project"
+openstack_domain_name = "Default"
+openstack_region      = "RegionOne"
+
+# =============================================================================
+# Rancher Credentials
+# =============================================================================
+
+rancher_api_url   = "https://rancher.example.com"
+rancher_token_key = "token-xxxxx:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+
+# =============================================================================
+# Cluster Settings
+# =============================================================================
+
+cluster_name       = "openstack-k8s"
+kubernetes_version = "v1.31.6+rke2r1"
+
+# =============================================================================
+# OpenStack Network
+# =============================================================================
+
+external_network_name = "public"
+network_cidr          = "192.168.100.0/24"
+dns_nameservers       = ["8.8.8.8", "8.8.4.4"]
+
+# =============================================================================
+# Node Configuration
+# =============================================================================
+
+image_name     = "ubuntu-22.04"
+ssh_user       = "ubuntu"
+keypair_name   = "rancher-k8s"
+ssh_public_key = "~/.ssh/id_rsa.pub"
+
+# Control plane nodes
+cp_flavor    = "m1.large"
+cp_count     = 3
+cp_disk_size = 40960
+
+# Worker nodes
+worker_flavor    = "m1.large"
+worker_count     = 2
+worker_disk_size = 40960
+
+availability_zone = "nova"
