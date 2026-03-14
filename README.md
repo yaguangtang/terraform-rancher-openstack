@@ -53,7 +53,7 @@ terraform apply
 | `rancher_api_url` | Rancher server URL | — |
 | `rancher_token_key` | Rancher bearer token | — |
 | `cluster_name` | K8s cluster name | `openstack-k8s` |
-| `kubernetes_version` | RKE2 version | `v1.31.6+rke2r1` |
+| `kubernetes_version` | RKE2 version | `v1.34.4+rke2r1` |
 | `external_network_name` | Public/external network | `public` |
 | `network_cidr` | Subnet CIDR | `192.168.100.0/24` |
 | `image_name` | VM image (needs cloud-init) | `ubuntu-22.04` |
@@ -68,7 +68,7 @@ terraform apply
 - `image_name` must be a cloud-init capable image available in your OpenStack Glance (e.g. Ubuntu 22.04 cloud image).
 - `external_network_name` should match the shared/provider network in your OpenStack that provides floating IPs.
 - The security group allows intra-cluster traffic between members. External access is limited to SSH, K8s API, HTTPS, HTTP, and NodePorts.
-- Disk sizes in the machine config are in **MB** (e.g. `40960` = 40 GB).
+- Disk sizes in the machine config are in **GB** (e.g. `40` = 40 GB).
 
 ## Cleanup
 

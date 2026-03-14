@@ -21,7 +21,7 @@ rancher_token_key = "token-xxxxx:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 # =============================================================================
 
 cluster_name       = "openstack-k8s"
-kubernetes_version = "v1.31.6+rke2r1"
+kubernetes_version = "v1.34.4+rke2r1"
 
 # =============================================================================
 # OpenStack Network
@@ -43,11 +43,11 @@ ssh_public_key = "~/.ssh/id_rsa.pub"
 # Control plane nodes
 cp_flavor    = "m1.large"
 cp_count     = 3
-cp_disk_size = 40960
+cp_disk_size = 40
 
 # Worker nodes
 worker_flavor    = "m1.large"
 worker_count     = 2
-worker_disk_size = 40960
+worker_disk_size = 40
 
 availability_zone = "nova"
